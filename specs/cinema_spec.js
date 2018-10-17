@@ -46,7 +46,10 @@ describe('Cinema', function () {
     assert.strictEqual(actual, 2);
   });
 
-  it('should be able to check whether there are some films from a particular year');
+  it('should be able to check whether there are some films from a particular year', function() {
+    const actual = cinema.filmYear(2017);
+    assert.strictEqual(actual, true);
+  });
 
   it('should be able to check whether there are no films from a particular year');
 

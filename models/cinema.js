@@ -18,7 +18,9 @@ Cinema.prototype.filmYear = function (year) {
   return this.films.some(film => film.year === year);
 };
 
-
+Cinema.prototype.minDuration = function (duration) {
+  return this.films.every(film => film.length >= duration);
+};
 
 
 module.exports = Cinema;

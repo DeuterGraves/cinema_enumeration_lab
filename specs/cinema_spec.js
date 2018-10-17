@@ -34,7 +34,11 @@ describe('Cinema', function () {
     assert.deepStrictEqual(actual, expected)
   });
 
-  it('should be able to find a film by title');
+  it('should be able to find a film by title', function() {
+    const actual = cinema.findFilm('Moonlight');
+    const expected = moonlight;
+    assert.strictEqual(actual, expected);
+  });
 
   it('should be able to filter films by genre');
 

@@ -40,7 +40,11 @@ describe('Cinema', function () {
     assert.strictEqual(actual, expected);
   });
 
-  it('should be able to filter films by genre');
+  it('should be able to filter films by genre', function(){
+    let filtered = cinema.filterGenre("drama");
+    const actual = filtered.length;
+    assert.strictEqual(actual, 2);
+  });
 
   it('should be able to check whether there are some films from a particular year');
 
